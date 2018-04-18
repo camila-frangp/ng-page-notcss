@@ -32,7 +32,7 @@ Play with it on StackBlitz here: https://stackblitz.com/edit/angular-e1f9hq
 ## Quick Start
 
 ```
-npm install ngx-pagination --save
+npm i ng-page-notcss
 ```
 
 ### Angular Version
