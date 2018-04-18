@@ -1,4 +1,4 @@
-# Pagination for Angular (v2+)[![Build Status](https://travis-ci.org/michaelbromley/ngx-pagination.svg?branch=master)](https://travis-ci.org/michaelbromley/ngx-pagination)
+
 
 This project is a modification of ngx-pagination with the only difference is that it does not have default styles, anyway in the documentation there is an example of css using flexbox.
 
@@ -22,12 +22,6 @@ This project is a modification of ngx-pagination with the only difference is tha
 * [Building the docs](#building-the-docs)
 * [License](#license)
 
-
-## Demo poject original
-
-Check out the live demo here: http://michaelbromley.github.io/ngx-pagination/
-
-Play with it on StackBlitz here: https://stackblitz.com/edit/angular-e1f9hq
 
 ## Quick Start
 
