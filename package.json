@@ -1,11 +1,38 @@
 {
+  "_from": "ng-page-notcss@^1.0.0",
+  "_id": "ng-page-notcss@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-D/8Is3z0nipHCCQN0XZyh5/nhSrON/ybft3Wk8dfPHMGtjqzoOSorNaanypO35JD/jECcam/cS/evjlaqDAgQg==",
+  "_location": "/ng-page-notcss",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "ng-page-notcss@^1.0.0",
+    "name": "ng-page-notcss",
+    "escapedName": "ng-page-notcss",
+    "rawSpec": "^1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.0"
+    },
+    "_requiredBy": [
+      "/"
+    ],
   "name": "ng-page-notcss",
   "version": "1.0.0",
   "description": "Edit ngx-pagination without style",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && npm run ngc && npm run rollup:fesm && npm run rollup:umd && npm run copy-metadata",
+    "clean": "rm -rf build && rm -rf dist",
+    "copy-metadata": "find build/* -not -name '*.js' -exec cp -t dist {} +",
+    "ngc": "ngc -p config/tsconfig.build.json",
+    "publish-lib": "npm run test && npm run build",
+    "rollup:fesm": "rollup build/ngx-pagination.js -o dist/ngx-pagination.js -f es",
+    "rollup:umd": "rollup build/ngx-pagination.js -o dist/ngx-pagination.umd.js --f umd --name ngxPagination",
+    "test": "karma start config/karma.conf.js",
+    "test:watch": "npm run test -- --auto-watch --no-single-run"
   },
+  "types": "dist/ngx-pagination.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/camila-frangp/ng-page-notcss.git"
@@ -16,8 +43,49 @@
   ],
   "author": "Camila GP",
   "license": "ISC",
+  "main": "dist/ngx-pagination.umd.js",
+  "module": "dist/ngx-pagination.js",
+  "peerDependencies": {
+    "@angular/core": ">=2.3.1",
+    "@angular/common": ">=2.3.1"
+  },
   "bugs": {
     "url": "https://github.com/camila-frangp/ng-page-notcss/issues"
   },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "devDependencies": {
+    "@angular/common": "4.0.2",
+    "@angular/compiler": "4.0.2",
+    "@angular/compiler-cli": "4.0.2",
+    "@angular/core": "4.0.2",
+    "@angular/platform-browser": "4.0.2",
+    "@angular/platform-browser-dynamic": "4.0.2",
+    "@types/jasmine": "2.5.41",
+    "@types/node": "^6.0.45",
+    "jasmine-core": "^2.4.1",
+    "json-loader": "^0.5.4",
+    "karma": "1.7.1",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-jasmine": "1.1.0",
+    "karma-mocha-reporter": "^2.2.0",
+    "karma-phantomjs-launcher": "1.0.4",
+    "karma-webpack": "^2.0.3",
+    "marked": "^0.3.6",
+    "phantomjs-prebuilt": "^2.1.7",
+    "reflect-metadata": "0.1.10",
+    "rollup": "^0.50.0",
+    "rxjs": "^5.0.3",
+    "ts-loader": "^3.0.5",
+    "typescript": "2.4.2",
+    "webpack": "3.8.1",
+    "zone.js": "^0.8.5"
+  },
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/camila-frangp/ng-page-notcss#readme"
 }
+
+
+  
